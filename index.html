@@ -1,10 +1,270 @@
 <!DOCTYPE html>
 <html>
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mi Jessi ❤️</title>
+
+<style>
+
+*{
+box-sizing:border-box;
+}
+
+body{
+margin:0;
+height:100vh;
+overflow:hidden;
+background:radial-gradient(circle,#39205f,#05000f);
+color:white;
+font-family:Arial,sans-serif;
+display:flex;
+justify-content:center;
+align-items:center;
+}
+
+
+/* estrellas */
+
+body::before{
+content:"";
+position:absolute;
+width:300%;
+height:300%;
+
+background-image:
+radial-gradient(white 2px,transparent 3px),
+radial-gradient(white 1px,transparent 2px),
+radial-gradient(#fff 1.5px,transparent 2.5px);
+
+background-size:
+120px 120px,
+70px 70px,
+180px 180px;
+
+animation:mover 30s linear infinite;
+}
+
+
+@keyframes mover{
+from{
+transform:translateY(0);
+}
+
+to{
+transform:translateY(-200px);
+}
+}
+
+
+.contenedor{
+
+position:relative;
+
+width:85%;
+max-width:400px;
+
+background:rgba(255,255,255,.12);
+
+backdrop-filter:blur(10px);
+
+padding:30px;
+
+border-radius:25px;
+
+text-align:center;
+
+box-shadow:0 0 40px #ffffff55;
+
+}
+
+
+h1{
+font-size:30px;
+}
+
+
+p{
+font-size:18px;
+line-height:1.5;
+}
+
+
+button{
+
+background:#ff6fae;
+
+border:none;
+
+padding:15px 30px;
+
+border-radius:50px;
+
+color:white;
+
+font-size:18px;
+
+margin-top:20px;
+
+}
+
+
+
+.pagina{
+display:none;
+}
+
+
+.corazon{
+font-size:50px;
+}
+
+
+</style>
+
+</head>
+
+
 <body>
 
-<h1>PRUEBA JESSI ❤️</h1>
 
-<p>Si ves esto, ya encontramos el problema.</p>
+<div class="contenedor">
+
+
+<div id="inicio">
+
+<div class="corazon">
+❤️
+</div>
+
+<h1>
+🌌 Tienes una carta 💌
+</h1>
+
+<p>
+Para mi Jessi, hice esto con mucho cariño.
+</p>
+
+
+<button onclick="mostrar('carta')">
+Ábreme ❤️
+</button>
+
+
+</div>
+
+
+
+
+<div id="carta" class="pagina">
+
+<h1>
+Mi niña ❤️
+</h1>
+
+<p>
+
+Sé que llevamos solamente dos meses,
+pero han sido de los mejores meses que he vivido.
+
+Gracias por cada momento, cada risa y cada recuerdo.
+
+Espero que esto sea solo el comienzo de muchos más.
+
+</p>
+
+
+<button onclick="mostrar('musica')">
+Antes de seguir 🎵
+</button>
+
+</div>
+
+
+
+
+
+<div id="musica" class="pagina">
+
+<h1>
+🎧 Algo para ti
+</h1>
+
+
+<p>
+
+Antes de seguir quiero que escuches algo.
+
+Cada canción tiene un pedacito de lo que siento por ti.
+
+</p>
+
+
+<button>
+Nuestra playlist ❤️
+</button>
+
+
+<button onclick="mostrar('final')">
+Continuar 💌
+</button>
+
+
+</div>
+
+
+
+
+
+
+<div id="final" class="pagina">
+
+<h1>
+💌 Para ti
+</h1>
+
+
+<p>
+
+Gracias por llegar a mi vida, Jessi.
+
+Me haces feliz y espero seguir creando momentos contigo.
+
+Te quiero mucho ❤️
+
+</p>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+<script>
+
+function mostrar(id){
+
+document.getElementById("inicio").style.display="none";
+
+let paginas=document.getElementsByClassName("pagina");
+
+for(let i=0;i<paginas.length;i++){
+
+paginas[i].style.display="none";
+
+}
+
+document.getElementById(id).style.display="block";
+
+}
+
+</script>
+
 
 </body>
 </html>
