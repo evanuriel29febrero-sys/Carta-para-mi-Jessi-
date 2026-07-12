@@ -1,105 +1,114 @@
 <!DOCTYPE html>
 <html>
 <head>
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Mi Jessi ❤️</title>
 
 <style>
 
-* {
-  box-sizing: border-box;
-}
-
 body {
-  margin: 0;
-  height: 100vh;
-  overflow: hidden;
-  background:
-    radial-gradient(circle at top, #332060, #080018 70%);
-  color: white;
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: radial-gradient(circle at center, #34205f, #05000f);
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
-/* Estrellas */
-.estrellas {
-  position: absolute;
-  inset: 0;
-  background-image:
+/* Fondo de estrellas */
+body::before {
+    content: "";
+    position: absolute;
+    width: 300%;
+    height: 300%;
+    background-image:
     radial-gradient(white 2px, transparent 3px),
-    radial-gradient(#ffffff 1px, transparent 2px),
+    radial-gradient(white 1px, transparent 2px),
     radial-gradient(#ffffff 1.5px, transparent 2.5px);
-  background-size:
-    140px 140px,
-    90px 90px,
-    200px 200px;
-  background-position:
-    20px 30px,
-    50px 70px,
-    100px 20px;
-  animation: estrellas 25s linear infinite;
+
+    background-size:
+    120px 120px,
+    70px 70px,
+    180px 180px;
+
+    animation: movimiento 30s linear infinite;
+    opacity: 0.8;
 }
 
 
-@keyframes estrellas {
-  from {
-    transform: translateY(0);
-  }
+@keyframes movimiento {
 
-  to {
-    transform: translateY(-150px);
-  }
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-200px);
+    }
+
 }
 
 
 /* Carta */
+
 .carta {
-  position: relative;
-  width: 85%;
-  max-width: 380px;
-  padding: 35px 25px;
-  text-align: center;
 
-  background: rgba(255,255,255,0.12);
-  border-radius: 25px;
+    position: relative;
+    width: 80%;
+    max-width: 350px;
 
-  backdrop-filter: blur(8px);
+    padding: 30px;
 
-  box-shadow:
-    0 0 25px rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.12);
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow: 0 0 40px rgba(255,255,255,0.4);
+
 }
 
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 20px;
+
+    font-size: 30px;
+
 }
 
 
 p {
-  font-size: 18px;
-  line-height: 1.5;
+
+    font-size: 18px;
+
+    line-height: 1.5;
+
 }
 
 
 button {
 
-  margin-top: 25px;
+    margin-top: 20px;
 
-  padding: 15px 35px;
+    padding: 15px 35px;
 
-  border: none;
-  border-radius: 50px;
+    border: none;
 
-  background: #ff6fae;
+    border-radius: 50px;
 
-  color: white;
+    background: #ff6fae;
 
-  font-size: 18px;
+    color: white;
+
+    font-size: 18px;
 
 }
 
@@ -110,8 +119,6 @@ button {
 
 <body>
 
-<div class="estrellas"></div>
-
 
 <div class="carta">
 
@@ -121,12 +128,12 @@ button {
 
 
 <p>
-Sé que hay algo que quiero decirte...
+Sé que llevamos solamente dos meses, pero han sido momentos muy especiales para mí ❤️
 </p>
 
 
 <button>
-Ábreme ❤️
+Ábreme 💗
 </button>
 
 
